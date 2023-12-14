@@ -999,7 +999,7 @@ eightmkmdtvkctkvptsbckzpnkhpskdmp3
 six2twobgzsfsptlqnine42xtmdprjqc
 pxreightwo7`
 
-console.log('haj')
+// console.log('haj')
 
 // extractaj brojeve iz stringa u array
 // naciljaj prvi i zadnji index
@@ -1009,10 +1009,24 @@ console.log('haj')
 
 const result = input.split(/\r?\n/);
 
-for (let i = 0; i < result.length; i++) {
-    console.log(result[i])
+for (let i = 0; i < result.length; i++) {// go through each index
+    // console.log(result[i]);
+    let singleDigits = result[i].match(/\d/g);// extract ALL single digit numbers from each index into new arrays
+    // console.log(singleDigits);
+    console.log('First and last digit in each string line: ' + singleDigits[0] + ', ' + singleDigits[singleDigits.length - 1]);// only log first and last
+    // 
   }
-  
+
+
+
+
+const test = "js34hfejievfrnjf89jcrj67";
+// console.log(test);
+
+let brojkice = test.match(/\d/g);//       (/\d+/g) uključuje sve digite broja, ne samo 1 (g = global)
+if (brojkice) {
+  // console.log('First and last digit in the string: ' + brojkice[0] + ', ' + brojkice[brojkice.length - 1]);
+}
 
 
 
