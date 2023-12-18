@@ -1008,14 +1008,38 @@ pxreightwo7`
 // zbroji sve brojeve u 1 finalnu vrijednost
 
 const result = input.split(/\r?\n/);
+// console.log([1,2]) 
+// console.log(['1','2'])
+let firstLast = [];
 
 for (let i = 0; i < result.length; i++) {// go through each index
     // console.log(result[i]);
-    let singleDigits = result[i].match(/\d/g);// extract ALL single digit numbers from each index into new arrays
+    let singleDigits = result[i].match(/\d/g);// extract ALL single digit numbers from each index into new arrays - each element is a string
     // console.log(singleDigits);
-    console.log('First and last digit in each string line: ' + singleDigits[0] + ', ' + singleDigits[singleDigits.length - 1]);// only log first and last
-    // 
+    // console.log('First and last digit in each string line: ' + singleDigits[0] + ', ' + singleDigits[singleDigits.length - 1]);// only log first and last
+    firstLast.push(parseInt(singleDigits[0] + singleDigits[singleDigits.length - 1]));
   }
+
+// console.log(firstLast);
+let finalSum = 0;
+
+for (let i = 0; i < firstLast.length; i++) {
+  finalSum = finalSum + firstLast[i];
+}
+console.log(finalSum);
+
+
+
+// let firstLastNumbers = parseInt('text');
+
+
+
+// myString = '129' 
+// console.log(parseInt(myString)) // expected result: 129
+
+
+
+
 
 
 
